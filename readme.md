@@ -13,4 +13,4 @@ Maison des Ligues est une application web PHP conçue pour simplifier la gestion
 - Php
 - MySql
 
-[Publication du projet](https://github.com/Stephanemdz/maison_des_ligues)
+[Publication du projet](https://stephanemdz.github.io/maison_des_ligues/)
