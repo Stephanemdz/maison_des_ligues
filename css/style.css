@@ -1,0 +1,41 @@
+body{
+    margin: 3% 15%;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    max-width: fit-content;
+    background-color: #efe7e5;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    text-align: end;
+}
+img{
+    width: 500px;
+    padding: 20px;
+}
+.form{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    width: 100%;
+    
+}
+.imga{
+    width: 100%;
+    height: auto; 
+    display: block;
+}
+.form-container{
+    padding: 0px;
+}
+input{
+    border-radius: 20px;
+    padding: 5px 25px 5px 25px;
+}
+footer{
+    padding: 50px 0px 0px 0px ;
+}
