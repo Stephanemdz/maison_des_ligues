@@ -12,9 +12,6 @@
         <h1>
             <a href="index.html">M2L</a>
         </h1>
-        <nav>
-            <a href="login.html">Connexion</a>
-        </nav>
     </header>
     <main>
         <section class="form">
@@ -30,7 +27,7 @@
                     </p>
             </div>
             <fieldset>
-                <form class="form-container" action="#" method="post">
+                <form class="form-container" action="#" method="post" id="inscription-form">
 
                     <label for="civilite">Civilité :</label><br>
                     <select id="civilite" name="civilite">
@@ -59,9 +56,9 @@
                 
                     <label for="mot_de_passe">Mot de passe :</label><br>
                     <input type="password" id="mot_de_passe" name="mot_de_passe" required><br><br>
-                
-                    <input type="submit" value="S'inscrire">
-                
+                    
+                    <button type="button" ><a href="login.html">Connexion</a></button>
+                    <button type="submit">Soumettre</button>
                   </form>
             </fieldset>
         </section>
