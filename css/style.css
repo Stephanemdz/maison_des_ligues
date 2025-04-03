@@ -32,7 +32,7 @@ img{
 .form-container{
     padding: 0px;
 }
-input{
+input, select, button{
     border-radius: 20px;
     padding: 5px 25px 5px 25px;
 }
