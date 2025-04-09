@@ -1,0 +1,16 @@
+body{
+    color: black;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    background-color: #efe7e5;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+footer{
+    padding: 50px 0px 0px 0px ;
+}
