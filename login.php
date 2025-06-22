@@ -19,7 +19,7 @@
             $_SESSION['email'] = $user['email']; // Stocker l'email utilisateur dans la session qui .....
 
             // Redirection vers la page d'accueil après la connexion réussie
-            header('Location: index.php');
+            header('Location: dashboard.php');
             exit();
         } else {
             echo "<p style='color:red;'>Email ou mot de passe incorrect.</p>";

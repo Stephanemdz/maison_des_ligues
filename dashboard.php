@@ -1,11 +1,10 @@
 <?php
-    include_once __DIR__.'/controller/baseController.php';
-    include_once __DIR__.'/model/config.php';
-    include_once __DIR__.'/model/model.php';
-    include_once __DIR__.'/model/verify.php';
-// echo $_SESSION['userid'];
-// var_dump($_SESSION['userid']);
- ?>
+include_once __DIR__.'/controller/baseController.php';
+include_once __DIR__.'/model/config.php';
+include_once __DIR__.'/model/model.php';
+include_once __DIR__.'/model/verify.php';
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>      
@@ -24,8 +23,7 @@
         </h1>
         <nav>
         <a href="index.php">Accueil</a>
-        <a href="login.php">Login</a>
-        <a href="sign.php">Sign up</a>
+        <a href="logout.php">Se déconnecter</a>
         </nav>
     </header>
     <main>
@@ -65,8 +63,6 @@
                 <?php   endforeach;?>
             </table>
         </section>
-        <?php
-        include_once __DIR__.'/model/verify.php';?>
         <section class="AjoutDeMission">
             <a href="addmission.php">Ajouter une mission</a>
         </section>
