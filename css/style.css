@@ -36,10 +36,30 @@ input, select, button{
     border-radius: 20px;
     padding: 5px 25px 5px 25px;
 }
-fieldset{
+/* fieldset{
     border-color: black;
     border-radius: 10px;
-}
+} */
 footer{
     padding: 50px 0px 0px 0px ;
 }
+table {
+    background-color: #ffffff;
+    margin: 0 auto;
+    width: 80%;
+    border-collapse: collapse; 
+}
+th, td {
+    border: 1px solid darkgray;
+    padding: 15px;
+}
+li{
+    background-color: #0d273b;
+    border-radius: 60%;
+    width: 6%;
+}
+/* fieldset{
+    margin: 0 auto;
+    background-color: #3D5467; 
+    width: 30%;
+} */

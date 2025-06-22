@@ -1,3 +1,31 @@
+<?php
+    include_once __DIR__.'/controller/baseController.php';
+    include_once __DIR__.'/model/config.php';
+    include_once __DIR__.'/model/model.php';
+
+     // Démarrer la session pour l'utilisateur
+
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {
+        $email = htmlspecialchars($_POST['email']);
+        $password = sha1($_POST['password']);
+
+        $requete = $PDO->prepare('SELECT * FROM user WHERE email = ? AND password = ?');
+        $requete->execute(array($email, $password));
+
+        // Vérifier si un utilisateur correspond bien aux identifiants que j'ai entré
+        if ($requete->rowCount() > 0) {
+            $user = $requete->fetch();
+            $_SESSION['userid'] = $user['id']; // Stocker l'ID utilisateur dans la session qui lui ai attribué
+            $_SESSION['email'] = $user['email']; // Stocker l'email utilisateur dans la session qui .....
+
+            // Redirection vers la page d'accueil après la connexion réussie
+            header('Location: index.php');
+            exit();
+        } else {
+            echo "<p style='color:red;'>Email ou mot de passe incorrect.</p>";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,10 +36,21 @@
     <title>Projet M2L</title>
 </head>
 <body>
-    <header>
+<header>
         <h1>
-            <a href="index.html">M2L INTERFACE</a>
+            <a href="index.php">
+                M2L INTERFACE ITIC PARIS
+            </a>
         </h1>
+        <nav>
+        <a href="index.php">Accueil</a>
+        <?php if(isset($user)):?>
+        <a href="logout.php">Se deconnecter</a>
+        <?php else :?>
+        <a href="login.php">Login</a>
+        <a href="sign.php">Sign up</a>
+        <?php endif;?>
+        </nav>
     </header>
     <main>
         <!-- côté image de l'interface -->

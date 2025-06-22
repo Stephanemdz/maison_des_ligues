@@ -1,3 +1,27 @@
+<?php
+    include_once __DIR__.'/controller/baseController.php';
+    include_once __DIR__.'/model/config.php';
+    include_once __DIR__.'/model/model.php';
+?>
+<?php 
+        if(!empty($_POST['email']) AND !empty($_POST['password'])){
+            $firstname = htmlspecialchars($_POST['firstname']);
+            $lastname = htmlspecialchars($_POST['lastname']);
+            $birthdate = htmlspecialchars($_POST['birthdate']);
+            $email = htmlspecialchars($_POST['email']);
+            $password = sha1($_POST['password']);
+            
+     
+           $requete = $PDO->prepare('INSERT INTO user (firstname, lastname, birthdate, email, password) VALUES (?,?,?,?,?)');
+           $requete->execute(array($firstname, $lastname, $birthdate, $email, $password));
+            // $requete->debugDumpParams();
+           if($requete->rowCount() > 0){
+            die("Félicitations, bien venu parmi nous petit monstre coquin...");
+           }else{
+            echo "Bouge toi un peu le cul la soit plus précis.....";
+           }
+        }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,10 +32,21 @@
     <title>Projet M2L</title>
 </head>
 <body>
-    <header>
+<header>
         <h1>
-            <a href="index.html">M2L INTERFACE</a>
+            <a href="index.php">
+                M2L INTERFACE ITIC PARIS
+            </a>
         </h1>
+        <nav>
+        <a href="index.php">Accueil</a>
+        <?php if(isset($user)):?>
+        <a href="logout.php">Se deconnecter</a>
+        <?php else :?>
+        <a href="login.php">Login</a>
+        <a href="sign.php">Sign up</a>
+        <?php endif;?>
+        </nav>
     </header>
     <main>
         <!-- côté image de l'interface -->
