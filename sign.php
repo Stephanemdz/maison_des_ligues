@@ -17,6 +17,8 @@
             // $requete->debugDumpParams();
            if($requete->rowCount() > 0){
             die("Félicitations, bien venu parmi nous petit monstre coquin...");
+            header('Location: login.php');
+            exit();
            }else{
             echo "Bouge toi un peu le cul la soit plus précis.....";
            }

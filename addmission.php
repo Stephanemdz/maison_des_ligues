@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "maison_des_ligues";
+$dbname = "itic_paris";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -18,12 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $description = $_POST['description'];
 
     // Insérer les données dans la table mission (ID auto-incrémenté)
-    $sql = "INSERT INTO mission (titre, description) VALUES (?, ?)";
+    $sql = "INSERT INTO mission (title, description) VALUES (?, ?)";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ss", $titre, $description);
 
     if ($stmt->execute()) {
         echo "Mission ajoutée avec succès.";
+        header("Location: index.php"); // Redirection vers le tableau de bord après l'ajout
+        exit();
     } else {
         echo "Erreur : " . $stmt->error;
     }
@@ -39,7 +41,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>AddMission</title>
 </head>
 <body>
     <h1>Ajouter une mission</h1>
@@ -52,5 +54,6 @@ $conn->close();
 
         <button type="submit">Ajouter</button>
     </form>
+    <a href="index.php">Retour</a>
 </body>
 </html>

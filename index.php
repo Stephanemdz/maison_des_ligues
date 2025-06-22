@@ -73,6 +73,9 @@
         </section>
         <?php
         include_once __DIR__.'/model/verify.php';?>
+        <section class="AjoutDeMission">
+            <a href="addmission.php">Ajouter une mission</a>
+        </section>
     </main>
 </body>
 </html>
