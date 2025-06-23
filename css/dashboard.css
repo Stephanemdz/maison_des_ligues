@@ -12,3 +12,7 @@ a{
 footer{
     padding: 50px 0px 0px 0px ;
 }
+ul li a{
+    display: flex;
+    justify-content: space-around;
+}

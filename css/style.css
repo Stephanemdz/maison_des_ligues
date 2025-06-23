@@ -53,13 +53,26 @@ th, td {
     border: 1px solid darkgray;
     padding: 15px;
 }
-li{
-    background-color: #0d273b;
-    border-radius: 60%;
-    width: 6%;
-}
+
 /* fieldset{
     margin: 0 auto;
     background-color: #3D5467; 
     width: 30%;
 } */
+.acceuil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    list-style: none;
+}
+li{
+    background-color: aquamarine;
+}

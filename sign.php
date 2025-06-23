@@ -40,15 +40,6 @@
                 M2L INTERFACE ITIC PARIS
             </a>
         </h1>
-        <nav>
-        <a href="index.php">Accueil</a>
-        <?php if(isset($user)):?>
-        <a href="logout.php">Se deconnecter</a>
-        <?php else :?>
-        <a href="login.php">Login</a>
-        <a href="sign.php">Sign up</a>
-        <?php endif;?>
-        </nav>
     </header>
     <main>
         <!-- côté image de l'interface -->
@@ -90,6 +81,7 @@
                 <label for="password">Mot de passe :</label> <br>
                 <input type="password" id="password" name="password" autocomplete="off" required> <br>
 
+                <button type="button" ><a href="login.php">Connexion</a></button>
                 <input type="submit" name ="envoi">
             </form>
         </fieldset>

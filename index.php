@@ -22,54 +22,27 @@
                 M2L INTERFACE ITIC PARIS
             </a>
         </h1>
-        <nav>
-        <a href="index.php">Accueil</a>
-        <a href="login.php">Login</a>
-        <a href="sign.php">Sign up</a>
-        </nav>
     </header>
     <main>
         <section class="acceuil">
-            <h2>
-                Bienvenue sur la base de données ITIC PARIS
-            </h2>
-            <p>
-                Dans le tableau qui suit vous trouverez la liste des professeurs et les missions qui leur sont
-                confiés par l'etablissement.
-            </p>
-        </section>
-        <section class="usermission">
-            <h2>
-                Voici les missions
-            </h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Numero</th>
-                        <th>titre de la mission</th>
-                        <th>description</th>
-                    </tr>
-                </thead>
-                <?php
-                $top10 = myMission($PDO);
-                foreach($mission as $column):?>
-                <tbody>
-                    <tr>
-                        <?=
-                    "<td>".($column['id_mission'])."</td>
-                    <td>".($column['title'])."</td>
-                    <td>".($column['description'])."</td>"
-                    ?>
-                    </tr>
-                </tbody>
-                <?php   endforeach;?>
-            </table>
-        </section>
-        <?php
-        include_once __DIR__.'/model/verify.php';?>
-        <section class="AjoutDeMission">
-            <a href="addmission.php">Ajouter une mission</a>
-        </section>
-    </main>
-</body>
-</html>
+            <div class="imga" id="imga">
+                <img src="asset/ai.jpg" alt="Image d'accueil">
+                    <p>
+                        <strong>
+                            Bienvenue à la maison des ligues
+                        </strong><br>
+                        Bienvenue à la Maison des Ligues ! Découvrez notre plateforme intuitive, conçue pour optimiser la 
+                        gestion de notre compagnie. Explorez nos outils et ressources interactives pour une expérience 
+                        fluide et enrichissante.
+                    </p>
+                </div>
+            </section>
+            <nav>
+                <ul>
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="sign.php">Sign up</a></li>
+                </ul>
+            </nav>
+        </main>
+    </body>
+    </html>
