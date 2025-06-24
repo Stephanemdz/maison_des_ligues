@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         echo "Mission ajoutée avec succès.";
-        header("Location: index.php"); // Redirection vers le tableau de bord après l'ajout
+        header("Location: dashboard.php"); // Redirection vers le tableau de bord après l'ajout
         exit();
     } else {
         echo "Erreur : " . $stmt->error;
@@ -41,6 +41,8 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon/logo_m2L.png">   
     <title>AddMission</title>
 </head>
 <body>
@@ -54,6 +56,6 @@ $conn->close();
 
         <button type="submit">Ajouter</button>
     </form>
-    <a href="index.php">Retour</a>
+    <a href="dashboard.php">Retour</a>
 </body>
 </html>

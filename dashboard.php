@@ -21,10 +21,7 @@ include_once __DIR__.'/model/verify.php';
                 M2L INTERFACE ITIC PARIS
             </a>
         </h1>
-        <nav>
-        <a href="index.php">Accueil</a>
         <a href="logout.php">Se déconnecter</a>
-        </nav>
     </header>
     <main>
         <section class="acceuil">
@@ -64,7 +61,9 @@ include_once __DIR__.'/model/verify.php';
             </table>
         </section>
         <section class="AjoutDeMission">
-            <a href="addmission.php">Ajouter une mission</a>
+            <button>
+                <a href="addmission.php">Ajouter une mission</a>
+            </button>
         </section>
     </main>
 </body>
