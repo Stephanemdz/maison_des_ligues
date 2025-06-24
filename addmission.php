@@ -46,7 +46,14 @@ $conn->close();
     <title>AddMission</title>
 </head>
 <body>
-    <h1>Ajouter une mission</h1>
+    <header>
+        <h1>
+            <a href="dashboard.php">
+                M2L INTERFACE ITIC PARIS
+            </a>
+        </h1>
+    </header>
+    <h2>Ajouter une mission</h2>
     <form method="POST" action="">
         <label for="titre">Titre de la mission :</label>
         <input type="text" id="titre" name="titre" required><br><br>

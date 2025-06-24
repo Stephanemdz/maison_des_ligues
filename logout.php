@@ -16,13 +16,18 @@ exit;
     <title>Deconnexion</title>
 </head>
 <body>
-    <h1>
-        Page de déconnexion 
-    </h1>
+    <header>
+        <h1>
+            <a href="dashboard.php">
+                M2L INTERFACE ITIC PARIS
+            </a>
+        </h1>
+    <h2>
+        Page de déconnexion
+    </h2>
     <h2>Êtes-vous sûr de vouloir vous déconnecter ?</h2>
     <form method="post">
         <input type="submit" name="logout" value="Se déconnecter">
     </form>
-    
 </body>
 </html>

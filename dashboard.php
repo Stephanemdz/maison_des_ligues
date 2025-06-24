@@ -17,7 +17,7 @@ include_once __DIR__.'/model/verify.php';
 <body>
     <header>
         <h1>
-            <a href="index.php">
+            <a href="dashboard.php">
                 M2L INTERFACE ITIC PARIS
             </a>
         </h1>
